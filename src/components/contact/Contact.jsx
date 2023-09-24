@@ -4,6 +4,8 @@ import { MdOutlineMailOutline } from 'react-icons/md';
 import { BsTelephoneOutbound } from 'react-icons/bs';
 import { IoLogoLinkedin } from 'react-icons/io';
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -34,14 +36,34 @@ const Contact = () => {
     //   formValue: form.current,
     // };
 
-    
+
     emailjs.sendForm('service_nm5orbi', 'template_3ik3tqb', form.current, '3JkVYMeqnopyn3juZ')
       .then((result) => {
-        debugger
+        
         console.log(result.text);
+        toast.success('Your Message has been Delivered', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
       }, (error) => {
         debugger
         console.log("Error is", error.text);
+        toast.error('Unable to send message.', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
       });
 
     e.target.reset()
@@ -88,6 +110,19 @@ const Contact = () => {
           <button type='submit' className='btn btn-primary'>Send Message</button>
         </form>
       </div>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
 
     </section>
   )

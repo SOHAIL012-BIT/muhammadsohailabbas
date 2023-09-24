@@ -53,7 +53,7 @@ const Nav = () => {
           </a>
         </IconButton>
       </Tooltip>
-      <Tooltip title="Certifications" placement="top">
+      <Tooltip title="Services" placement="top">
         <IconButton>
           <a
             href="#services"

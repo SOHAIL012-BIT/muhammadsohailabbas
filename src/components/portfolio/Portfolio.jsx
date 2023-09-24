@@ -5,31 +5,52 @@ import IMG2 from "../../assets/project2.jpg";
 import IMG3 from "../../assets/project3.png";
 import IMG4 from "../../assets/project4.png";
 
+import { BsCalendar2Check } from "react-icons/bs";
+
+
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Portfolio Website",
-    github: "https://github.com/NIVIDSHAH208/PortfolioWebsite/",
+    title: "Urdu Grammarly",
+    timeLine:"Oct 2022 - Present",
+    description:'I spearheaded the development of an innovative project called "Urdu Grammarly". google Maps. The key functionalities of the Urdu Grammarly project included accurate prediction of the next word, comprehensive grammar checks, and providing sentence corrections.',
+    github: "",
+    technology:"React Js, Django and MUI.",
+    myRole:"Django and React JS frameworks to build a robust backend and frontend and worked on training of NLP base Models."
   },
   {
     id: 2,
     image: IMG3,
     title: "Full Stack web app using Spring Boot",
-    github: "https://github.com/NIVIDSHAH208/CSIS4495_BeastshopProject",
+    title: "Portfolio Website",
+    timeLine:"Oct 2022 - Present",
+    description:'I spearheaded the development of an innovative project called "Urdu Grammarly". google Maps. The key functionalities of the Urdu Grammarly project included accurate prediction of the next word, comprehensive grammar checks, and providing sentence corrections.',
+    github: "",
+    technology:"React Js, Django and MUI.",
+    myRole:"Django and React JS frameworks to build a robust backend and frontend and worked on training of NLP base Models."
   },
   {
     id: 3,
     image: IMG2,
     title: "Minions: E-commerce Android Application",
-    github: "https://github.com/NIVIDSHAH208/F21G4_Minions",
+    title: "Portfolio Website",
+    timeLine:"Oct 2022 - Present",
+    description:'I spearheaded the development of an innovative project called "Urdu Grammarly". google Maps. The key functionalities of the Urdu Grammarly project included accurate prediction of the next word, comprehensive grammar checks, and providing sentence corrections.',
+    github: "",
+    technology:"React Js, Django and MUI.",
+    myRole:"Django and React JS frameworks to build a robust backend and frontend and worked on training of NLP base Models."
   },
   {
     id: 4,
     image: IMG4,
     title: "Nuclei Detection using CNN",
-    github: "https://github.com/NIVIDSHAH208/NucleiDetection_Project",
-  },
+    title: "Portfolio Website",
+    timeLine:"Oct 2022 - Present",
+    description:'I spearheaded the development of an innovative project called "Urdu Grammarly". google Maps. The key functionalities of the Urdu Grammarly project included accurate prediction of the next word, comprehensive grammar checks, and providing sentence corrections.',
+    github: "",
+    technology:"React Js, Django and MUI.",
+    myRole:"Django and React JS frameworks to build a robust backend and frontend and worked on training of NLP base Models."  },
 ];
 
 const Portfolio = () => {
@@ -39,21 +60,29 @@ const Portfolio = () => {
       <h2>Projects</h2>
 
       <div className="container portfolio__container">
-        {data.map(({ id, image, title, github }) => {
+        {data.map(({ id, image, title,timeLine, github,description,myRole,technology }) => {
           return (
             <article key={id} className="portfolio__item">
               <div className="portfolio__item-image">
                 <img src={image} alt={title} />
               </div>
-              <h3>{title}</h3>
-              <div className="portfolio__item-cta">
+              <h3 className="qualification__title">{title}</h3>
+           
+              <div className="__calendar">
+                  <BsCalendar2Check className="calendar__icon" />
+                  &nbsp; {timeLine}
+              </div>
+              <div className="detail_project">
+              <p> <span className="bullet_Point"> &#10022; </span>{description}</p>
+              <p> <span className="bullet_Point"> &#10022; </span> {myRole}</p>
+              <p> <span className="bullet_Point"> &#10022; </span> {technology}</p>
+              </div>
+              {/* <div className="portfolio__item-cta">
                 <a href={github} className="btn" target='_blank'>
                   Github
                 </a>
-                {/* <a href={github} className="btn btn-primary" target='_blank'>
-                  Live demo
-                </a> */}
-              </div>
+                
+              </div> */}
             </article>
           );
         })}

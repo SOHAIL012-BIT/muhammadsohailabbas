@@ -36,6 +36,34 @@
     gap: 1rem;
     margin-bottom: 1rem;
 }
+.qualification__title {
+    font-weight: 500;
+    font-size: 16pt;
+ 
+  }
+
+.bullet_Point{
+    color: var(--color-light);
+    font-size: 18pt;
+    margin-right: 0.5rem;
+  }
+.__calendar {
+    font-size: 0.813rem;
+    color: var(--color-light);
+    margin-top: -2rem;
+  }
+  .calendar__icon{
+    color: var(--color-primary);
+}
+.detail_project{
+    margin-top: 1rem;
+}
+.detail_project p{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+
+}
 
 @media screen and (max-width: 1024px) {
     .portfolio__container{

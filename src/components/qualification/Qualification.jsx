@@ -59,7 +59,7 @@ const Qualification = () => {
                   2019-2023
                 </div>
                 <br />
-                <p>
+                <p className="work_Acheivement">
                  <span className="bullet_Point"> &#10022; </span> 3.51 CGPA
                   <br />
                  <span className="bullet_Point"> &#10022; </span> Member of Bahria University Developer's Society<br />

@@ -9,65 +9,71 @@ const Services = () => {
       <h2>Services</h2>
 
       <div className='container services__container'>
-        <article className='service'>
+       <article className='service'>
           <div className='service__head'>
-            <h3>Web Development</h3>
+            <h3>Software Development</h3>
           </div>
           <ul className='service__list'>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>UI/UX Design</p>
+              <p>Full Stack Software Development</p>
+            </li>
+         
+            <li>
+              <MdCheckCircleOutline className="service__list-icon" />
+              <p>Chatbots Development</p>
             </li>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Authentication</p>
+              <p>Documentation </p>
             </li>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Back-end programming</p>
+              <p>Data Engineering</p>
             </li>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Payment gateway</p>
+              <p>Web Scraping</p>
             </li>
-            <li>
+            {/* <li>
               <MdCheckCircleOutline className="service__list-icon" />
               <p>Troubleshoot and Maintenance</p>
-            </li>
+            </li> */}
           </ul>
         </article>
 
         <article className='service'>
           <div className='service__head'>
-            <h3>Software Engineering</h3>
+            <h3>Content Writing</h3>
           </div>
           <ul className='service__list'>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Object-oriented programming</p>
+              <p>Data Engineering</p>
             </li>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Data Structure & Algorithms</p>
+              <p> Software Re-Engineering</p>
             </li>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Agile and Scrum</p>
+              <p>Language Specific (JavaScript,Python, .Net Core)</p>
             </li>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Testing</p>
+              <p>Software Design</p>
             </li>
             <li>
               <MdCheckCircleOutline className="service__list-icon" />
-              <p>Testing & Troubleshoot</p>
+              <p>Natural Language Processing</p>
             </li>
+          
           </ul>
         </article>
 
-        <article className='service'>
+        {/* <article className='service'>
           <div className='service__head'>
-            <h3>Data Analysis</h3>
+            <h3></h3>
           </div>
           <ul className='service__list'>
             <li>
@@ -91,7 +97,7 @@ const Services = () => {
               <p>Advanced Excel</p>
             </li>
           </ul>
-        </article>
+        </article> */}
       </div>
     </section>
   )
