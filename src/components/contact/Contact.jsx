@@ -13,28 +13,9 @@ const Contact = () => {
 
   const form = useRef();
 
-  const service_id = process.env.SERVICE_ID;
-  const template_key = process.env.TEMPLATE_ID;
-  const public_key = process.env.PUBLIC_KEY;
-
-  // let userTimezone, currentTime
-
-  // const getUserTimeLocation = () => {
-
-  //   // Get the user's timezone name
-  //   userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  //   currentTime = new Date();
-  // }
-
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // getUserTimeLocation()
-    // const emailParams = {
-    //   useruserTimezone: userTimezone,
-    //   currentTime: currentTime,
-    //   formValue: form.current,
-    // };
 
 
     emailjs.sendForm('service_nm5orbi', 'template_3ik3tqb', form.current, '3JkVYMeqnopyn3juZ')
@@ -69,9 +50,7 @@ const Contact = () => {
     e.target.reset()
   };
 
-  // useEffect(()=>{
-  //   getUserTimeLocation()
-  // },[])
+
 
   return (
     <section id="contact">
